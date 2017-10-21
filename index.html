@@ -228,6 +228,272 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/21/Github-Hexo-NexT创建个人博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/21/Github-Hexo-NexT创建个人博客/" itemprop="url">Github+Hexo+NexT创建个人博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-21T15:16:59+08:00">
+                2017-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>下载 xcode<br>下载Node<br>在gitHub上创建一个新项目， 命名必须是username.github.io<br>开始正式安装</p>
+<p>安装命令：npm install -g hexo-cli –no-optional<br>进入要安装的目录： cd ~/Document/hexo<br>安装：hexo init<br>执行：npm install</p>
+<p>后期部署</p>
+<p>添加文章: hexo new “博客名”<br>生成静态页面：hexo generate 或者 hexo g<br>本地启动: hexo sever 或者 hexo s</p>
+<p>这时候会有下面的提示信息</p>
+<p>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>打开网页<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就可以看到效果</p>
+<p>上传到 Gitub</p>
+<p>部署git插件 npm install hexo-deployer-git –save<br>我的本地项目名字就起名为 hexo<br>进入文件夹 hexo 得到下面的文件</p>
+<p>_config.yml<br>db.json<br>node_modules<br>package.json<br>scaffolds<br>source<br>themes<br>打开文件 _config.yml<br>找到 deploy:部署配置<br>改成下面的语句</p>
+<p>deploy:<br>type: git<br>repository: <a href="https://github.com/gonghonglou/gonghonglou.github.io.git" target="_blank" rel="external">https://github.com/gonghonglou/gonghonglou.github.io.git</a><br>branch: master<br>记得把 repository 改为自己的 github 项目名(我们要和自己上面创建的githug项目关联)。</p>
+<p>记得所有冒号后面都一个 空格， 不然会失败<br>部署命令：hexo deploy 或者 hexo d<br>这时候 打开网址 <a href="http://你的github项目名字.github.io" target="_blank" rel="external">http://你的github项目名字.github.io</a><br>即可以看到 和之前 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 一样的页面</p>
+<p>编辑 发布文章</p>
+<p>创建文章: hexo new “文章名字”</p>
+<p>所有文章都会在目录 /hexo/source/_posts 下<br>发布</p>
+<p>hexo generate //生成静态页面<br>hexo deploy // 部署到 gitHub<br>安装 theme （主题）</p>
+<p>这里以安装 hexo-theme-next 为例<br>cd 到项目文件夹中<br>执行 $ git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
+<p>把 hexo 中 _config.yml 中 theme 名称 由 landscape 改为 next<br>执行下面的语句</p>
+<p>hexo clean           //清除缓存文件 (db.json)和已生成的静态文件 (public)<br>hexo g             //生成缓存和静态文件<br>hexo d             //重新部署到服务器<br>主题修改成功</p>
+<p>现在我们整个个人博客配置就结束啦， 但是还有个很严重的问题， 因为博客部署在国外网站上， 访问速度相当慢。</p>
+<p>把博客同时部署到 gitHub 和 Coding<br><a href="https://git.coding.net/FlyBB/Flyfishering.github.io.git" target="_blank" rel="external">https://git.coding.net/FlyBB/Flyfishering.github.io.git</a></p>
+<p>这里部署失败了</p>
+<p>成功配置好的博客地址<br><a href="https://flyfishering.github.io" target="_blank" rel="external">https://flyfishering.github.io</a></p>
+<p>参考文章：</p>
+<ul>
+<li>Mac上搭建基于GitHub的Hexo博客</li>
+<li>在Mac下通过HEXO在Github上搭建博客</li>
+<li>Github+Hexo+NexT快速建站教程</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/21/新文章/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/21/新文章/" itemprop="url">新文章</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-21T15:16:11+08:00">
+                2017-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/21/flyFish/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -508,7 +774,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
